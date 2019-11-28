@@ -26,7 +26,7 @@ class TestPipelineMain extends FlatSpec with Matchers with TestBaseSpark {
     val emp_df = spark.sparkContext.parallelize(data)
       .toDF("emp_id", "emp_name", "emp_email", "emp_dob", "emp_ssn", "emp_dept")
       //.withColumn("emp_dob", col("emp_dob").cast(DateType))
-      .withColumn("emp_id", col("emp_id").cast(IntegerType))
+      //.withColumn("emp_id", col("emp_id").cast(IntegerType))
 
     val dept_df = spark
       .sparkContext
