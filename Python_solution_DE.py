@@ -38,7 +38,7 @@ Select 'Employee' entityName, case when ! emp_name_Valid then 'emp_name' end,cas
 union all \
 Select 'Employee' entityName, case when ! emp_email_Valid then 'emp_email' end,case when ! emp_email_Valid then emp_email end, 'Validation Failed' validationMessage from emp_invalid_recs \
 union all \
-Select 'Employee' entityName, case when emp_dob_Valid then 'emp_dob' end,case when emp_dob_Valid then emp_dob end, 'Validation Failed' validationMessage from emp_invalid_recs \
+Select 'Employee' entityName, case when ! emp_dob_Valid then 'emp_dob' end,case when ! emp_dob_Valid then emp_dob end, 'Validation Failed' validationMessage from emp_invalid_recs \
 union all \
 Select 'Employee' entityName, case when ! emp_ssn_Valid then 'emp_ssn' end,case when ! emp_ssn_Valid then emp_ssn end, 'Validation Failed' validationMessage from emp_invalid_recs \
 union all \
